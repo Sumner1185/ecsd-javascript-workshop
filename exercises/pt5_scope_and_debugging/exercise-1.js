@@ -1,16 +1,14 @@
 // Narrow down the scope to where it is necessary
-
 f1 = () => {
-  var1 = 0; // CHANGE var1
+  let var1 = 0;
   const arr = ["a", "b", "c", "d"];
 
   // CHANGE var2
-  for (var2 of arr) {
+  for (let var2 of arr) {
     var1++;
   }
 
   try {
-    var3 = 0; // CHANGE var3
     throw new Error();
   } catch (e) {
     // TESTING CODE
@@ -25,7 +23,7 @@ f1 = () => {
 
   // TESTING CODE
   try {
-    let scoper = var2;
+    scoper = var2;
     console.log("var2 isn't correct!");
   } catch (e) {
     console.log("var2 √");
@@ -39,7 +37,7 @@ f1();
 
 // TESTING CODE
 try {
-  let scoper = var1;
+  scoper = var1;
   console.log("var1 isn't correct!");
 } catch (e) {
   console.log("var1 √");

@@ -4,12 +4,6 @@
     <script src="./exercise-2.js"></script>
   </head>
   <body>
-    <script>
-      const map = Map(10);
-      map.generateMap(Tile);
-      const gui = GUI(map, "spawn-map", "2d", WaveSequence);
-      gui.drawMap();
-    </script>
     <h1>
       Spawn Wave!
     </h1>
@@ -23,4 +17,11 @@
       Your browser requires HTML 5 to render the canvas!
     </canvas>
   </body>
+  <script>
+    const map = Map(10);
+    map.generateMap(Tile);
+    const gui = GUI(map, "spawn-map", "2d", WaveSequence);
+    gui.drawMap();
+  </script>
+  
 </html>

@@ -19,7 +19,7 @@ const Map = (() => {
       size,
       grid: [],
       generateMap
-    };
+    }
   });
 })();
 
@@ -99,7 +99,7 @@ const GUI = (() => {
       waveSequence
     };
 
-    canvas.addEventListener("mouseclick", (event) => {
+    canvas.addEventListener("click", (event) => {
       gui.clickEvent(event);
     });
 
