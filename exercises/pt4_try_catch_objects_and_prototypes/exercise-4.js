@@ -33,20 +33,32 @@ function Shop(name, location, currency, inventory) {
   this.currency = currency;
   this.inventory = inventory;
 
-  this.isAvailable = (index) => {
-    this.inventory.available
+  this.isAvailable = (index) => this.inventory[index].available
+
+  this.addItem = (name, price, available) => this.inventory.push({ name, price, available })
+
+  this.search = (query) => {
+    this.inventory.forEach((item) => {
+      if (item.name.match(query) || item.name.match(query.toLowerCase())) {
+        console.log(item.name)
+      }
+    })
   }
 
-  // Code here...
+  this.listAvailableInventory = () => {
+    this.inventory.forEach((item) => {
+      console.log(`${item.name}: ${item.price}`)
+    })
+  }
 }
 
 const shop = new Shop("Happy Goods", "London - Old Street", "Sterling (£)", inventory);
 
 console.log(`Is a Sharp Soda available? ==> ${shop.isAvailable(3)}`);
 
-// shop.addItem("Tomato Soup", 1.25, true);
-// console.log(`Is the new item available? ==> ${shop.isAvailable(5)}`);
+shop.addItem("Tomato Soup", 1.25, true);
+console.log(`Is the new item available? ==> ${shop.isAvailable(5)}`);
 
-// shop.search("S");
+shop.search("S");
 
-// shop.listAvailableInventory();
+shop.listAvailableInventory();
