@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Random Number</title>
+  </head>
+  <body>
+    <h1 id="header">RANDOM NUMBER SITE</h1>
+    <p id="paragraph">In order for the debugger to work, have your browser developer toolkit open!</p>
+    <label for="fname">Random Number Range:</label>
+    <input type="text" id="range" name="range" value="100">
+    <br><br>
+    <button onclick="randomUpdate()">Generate Random Number!</button>
+    <h4 id="random-num">#TBD</h4>
+    <script>
+      const randomUpdate = () => {
+        debugger;
+
+        const range = document.getElementById("range").value;
+
+        if (isNaN(range))
+          throw "Range provided must be a number!"
+
+        const randomNum = Math.ceil(Math.random() * range);
+
+        document.getElementById("random-num").innerHTML = randomNum;
+      }
+    </script>
+  </body>
+</html>
