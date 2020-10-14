@@ -34,7 +34,7 @@ function Shop(name, location, currency, inventory) {
   this.inventory = inventory;
 
   this.isAvailable = (index) => {
-    // Code here...
+    this.inventory.available
   }
 
   // Code here...

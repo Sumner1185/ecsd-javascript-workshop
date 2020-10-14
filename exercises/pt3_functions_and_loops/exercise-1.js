@@ -9,6 +9,7 @@ const f1 = (array) => {
     for (const index in array) {
         array[index]++
     }
+    return array
 }
 
 f1(array);
@@ -26,6 +27,7 @@ const f2 = (array2) => {
         array2[i]--
         i++
     }
+    return array2
 }
 
 f2(array2);
@@ -51,7 +53,7 @@ console.log("\n");
 let array4 = [800, 600, 1200, 2000, 400];
 console.log("d) The values within array4: " + array4);
 
-const f4 = (array4) =>  array4.map(elem => elem / 2)
+const f4 = (array4) => array4.map(elem => elem / 2)
 
 console.log("The return of f4 on a array4: " + f4(array4));
 console.log("\n");

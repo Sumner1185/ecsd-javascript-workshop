@@ -2,35 +2,53 @@
 
 // a) Function which builds a square Map and returns it
 // example; buildMap(2) would return [['0,0', '1,0'],['0,1', '1,1']]
+// expected output for buildMap(5):
+// [
+//     ['0,0', '1,0', '2,0', '3,0', '4,0'],
+//     ['0,1', '1,1'],
+//     ['0,2', '1,2'],
+//     ['0,3', '1,3'],
+//     ['0,4', '1,4']
+// ]
 
-// Write your function here...
-// const buildMap = (dimensions) => {
-//     let myMap = []
-//     for (let i = 0; i < dimensions; i++) {
-//         for (let j = 0; j < dimensions; j++) {
-//             myMap.push('0,0')
-//         }
-//     }
-//     return myMap
-// }
+const buildMap = (dimensions) => {
+    let myMap = new Array(dimensions)
+    let index = 0
+    for (let i = 0; i < dimensions; i++) {
+        myMap[i] = new Array()
+        for (let j = 0; j < dimensions; j++) {
+            myMap[i].push(`${j},${index}`)
+        }
+        index++
+    }
+    return myMap
+}
 
 let squareMap = buildMap(5);
 
-console.log(squareMap);
-console.log('\n');
-
 // b) Function to build a rectangular Map and return it
 
-// Write your function here...
+const buildMap2 = (x, y) => {
+    let myMap = new Array(y)
+    let index = 0
+    for (let i = 0; i < y; i++) {
+        myMap[i] = new Array()
+        for (let j = 0; j < x; j++) {
+            myMap[i].push(`${j},${index}`)
+        }
+        index++
+    }
+    return myMap
+}
 
-// let recMap = buildMap2(3, 7);
-
-// console.log(recMap);
-// console.log('\n');
+let recMap = buildMap2(3, 7);
 
 // c) Function to output built map nicely into the console
 
 // Write your function here...
+const prettyMap = (map) => {
+    console.log(map)
+}
 
-// prettyMap(squareMap);
-// prettyMap(recMap);
+prettyMap(squareMap);
+prettyMap(recMap);
