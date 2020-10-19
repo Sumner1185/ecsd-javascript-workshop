@@ -1,0 +1,17 @@
+{
+  "name": "exercise-1",
+  "version": "1.0.0",
+  "description": "babel exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "build": "babel src --out-dir lib --presets=@babel/env"
+  },
+  "author": "alastair sumner",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.11.6"
+  }
+}
