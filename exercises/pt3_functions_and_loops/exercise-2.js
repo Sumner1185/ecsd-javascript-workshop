@@ -2,14 +2,6 @@
 
 // a) Function which builds a square Map and returns it
 // example; buildMap(2) would return [['0,0', '1,0'],['0,1', '1,1']]
-// expected output for buildMap(5):
-// [
-//     ['0,0', '1,0', '2,0', '3,0', '4,0'],
-//     ['0,1', '1,1'],
-//     ['0,2', '1,2'],
-//     ['0,3', '1,3'],
-//     ['0,4', '1,4']
-// ]
 
 const buildMap = (dimensions) => {
     let myMap = new Array(dimensions)
@@ -45,7 +37,6 @@ let recMap = buildMap2(3, 7);
 
 // c) Function to output built map nicely into the console
 
-// Write your function here...
 const prettyMap = (map) => {
     console.log(map)
 }

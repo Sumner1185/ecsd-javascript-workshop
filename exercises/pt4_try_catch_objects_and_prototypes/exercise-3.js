@@ -74,7 +74,6 @@ const search = (query) => {
   })
 }
 
-// Uncomment line below to test
 console.log('d)')
 search("h");
 console.log('\n')
@@ -89,6 +88,5 @@ const listAvailableInventory = () => {
   })
 }
 
-// Uncomment line below to test
 console.log('e)')
 listAvailableInventory();
